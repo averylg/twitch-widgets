@@ -1,0 +1,24 @@
+.marquee {
+  display: inline-block;
+  animation: scroll linear infinite;
+  box-sizing: border-box;
+  padding-right: 100%;
+  margin: 0;
+  transition: 'opacity 0.5s ease-in-out';
+
+  /* Testing only */
+  background-color: darkcyan;
+}
+
+@keyframes scroll {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 90% {
+    transform: translateX(0);
+  }
+  45%, 55% {
+    transform: translateX(calc(-100% + var(--container-width, 300px)));
+  }
+}
+
